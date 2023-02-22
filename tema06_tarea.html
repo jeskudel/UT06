@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {padding: 20px;}
+        input[type="text"]{margin-right: 20px;}
+        select{width: 300px;}
+        #atributos * {vertical-align: middle;}
+        #descripcion * {vertical-align: middle;}
+        #crear{width: 300px;height: 50px;align-self: center;}
+        #contenedor{text-align: center;}
+    </style>
+</head>
+
+<body>
+    <fieldset id="contenedor">
+        <legend>Creador de elementos HTML</legend>
+        <fieldset>
+            <legend>Elemento HTML a crear</legend>
+            <form action="">
+                <input type="radio" id="header" name="seleccion">header</input>
+                <input type="radio" id="nav" name="seleccion">nav</input>
+                <input type="radio" id="section" name="seleccion">section</input>
+                <input type="radio" id="aside" name="seleccion">aside</input>
+                <input type="radio" id="footer" name="seleccion">footer</input>
+                <input type="radio" id="formulario" name="seleccion">formulario</input>
+                <input type="radio" id="boton" name="seleccion">boton</input>
+                <input type="radio" id="input" name="seleccion">texto</input>
+                <input type="radio" id="label" name="seleccion">etiqueta (label)</input>
+                <br>
+                <br>
+                <div id="atributos">
+                    <label for="attr">Atributos para el elemento (separarlos con ",").</label>
+                    <textarea name="attr" id="attr" cols="60" rows="1"></textarea>
+                </div>
+                <br>
+                <div id="descripcion">
+                    <label for="texto">Contenido del nodo texto del elemento a crear.</label>
+                    <textarea name="texto" id="texto" cols="60" rows="5"></textarea>
+                </div>
+            </form>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Propiedades CSS del elemento</legend>
+            <form action="">
+                <label for="colorT">Color de texto</label>
+                <input type="text" name="colorT">
+                <label for="colorF">Color de fondo</label>
+                <input type="text" name="colorF">
+                <label for="tamaño">Tamaño de letra</label>
+                <input type="text" name="tamaño">
+            </form>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Posicionamiento del elemento en la pagina HTML</legend>
+            <form action="">
+                <label for="elementos">Selecciona un elemento para que se inserte dentro de el:</label>
+                <select name="elementos" id="elementos">
+                    <option value="opcionDefecto" disabled selected hidden>Selecciona una opción</option>
+                    <option value="opcionX">Dentro del DIV-X</option>
+                    <option value="opcionY">Dentro del DIV-Y</option>
+                </select>
+                <br>
+                <label for="posicion">Selecciona un elemento para que se inserte despues de el:</label>
+                <select name="posicion" id="posicion">
+                    <option value="opcionDefecto" disabled selected hidden>Selecciona una opción</option>
+                    <option value="opcionX">En primer lugar</option>
+                    <option value="opcionX">Despues del elemento X</option>
+                    <option value="opcionY">Despues del elemento Y</option>
+                </select>
+                <p><i>Aqui tendreis que añadir las opciones de los elementos que existan en la página. Si no habeis
+                        añadido nada, no habra opciones. Según vayais añadiendo elementos podreis elegir la posicion
+                        donde insertar el elemento que estais creando.</i></p>
+            </form>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Eventos del elemento HTML</legend>
+            <form action="">
+                <input type="checkbox" name="" id="">¿Quiéres añadir algún evento al elemento?
+            </form>
+            <p><i>En función de si este checkbox esta o no seleccionado, aqui debereis mostrar (los podeis poner ocultos
+                    o crearlos en el momento) elementos de un formulario que dejen añadir lo necesario para poder poner
+                    eventos asociados a estos elementos (podran ser de raton, de teclado, ...) y podran definir la
+                    acción que ocurrira cuando pase ese evento.</i></p>
+            <p><i>Esta parte la podeis implementar como querais, con textareas para las acciones a realizar para los
+                    eventos, con desplegables para el tipo de evento (click, mouseover, ...)</i></p>
+        </fieldset>
+        <br>
+        <button id="crear">CREAR ELEMENTO</button>
+    </fieldset>
+</body>
+<script>
+    // window.addEventListener('load', function () { alert('hola consola') });
+</script>
+
+</html>
